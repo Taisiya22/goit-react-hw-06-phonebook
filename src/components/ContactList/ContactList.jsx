@@ -10,9 +10,11 @@ export const ContactList = () => {
 
   return (
     <ul className={css.list}>
-      {
-        // .filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
-        contacts.map(({ id, name, number }) => (
+      {contacts
+        .filter(contact =>
+          contact.name.toLowerCase().includes(filter.toLowerCase())
+        )
+        .map(({ id, name, number }) => (
           <li className={css.item} key={id}>
             {name}: {number}
             <button
@@ -23,8 +25,7 @@ export const ContactList = () => {
               Delete
             </button>
           </li>
-        ))
-      }
+        ))}
     </ul>
   );
 }

@@ -78,7 +78,7 @@ const dispatch = useDispatch();
   );
 };
 
-// Form.propTypes = {
-//   addContact: PropTypes.func.isRequired,
-//   contacts: PropTypes.arrayOf(PropTypes.object).isRequired,
-// };
+Form.propTypes = {
+  addContact: PropTypes.func,
+  contacts: PropTypes.arrayOf(PropTypes.object),
+};
