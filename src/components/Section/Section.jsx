@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Section.module.css';
 
 export const Section = ({ title, children }) => (
@@ -8,7 +8,6 @@ export const Section = ({ title, children }) => (
   </>
 );
 
-// Section.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   children: PropTypes.object,
-// };
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+};

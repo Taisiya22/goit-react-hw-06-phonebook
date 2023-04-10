@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContact, filterContact, deleteContact } from 'components/redux/contactsSlice';
+
+import { deleteContact } from 'components/redux/contactsSlice';
+import { getContact, filterContact } from 'components/redux/selectors';
+import css from './ContactList.module.css';
 
 export const ContactList = () => {
   const contacts = useSelector(getContact);
@@ -28,7 +30,7 @@ export const ContactList = () => {
         ))}
     </ul>
   );
-}
+};
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
