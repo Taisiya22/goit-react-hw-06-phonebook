@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import css from './Form.module.css';
 
-import { addContact } from 'components/redux/contactsSlice';
-import { getContact } from 'components/redux/selectors';
+import { addContact } from 'redux/contactsSlice';
+import { getContact } from 'redux/selectors';
 
 export const Form = () => {
   const [name, setName] = useState('');
@@ -31,7 +31,7 @@ export const Form = () => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(addContact({ name, number, id: nanoid() }));
-   
+
     if (contacts.find(contact => contact.name === name)) {
       alert(`${name} is alredy in contacts`);
     }
